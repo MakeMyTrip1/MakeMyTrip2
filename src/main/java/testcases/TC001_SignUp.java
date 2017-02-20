@@ -18,16 +18,16 @@ public class TC001_SignUp extends MakeMyTripWrappers{
 		url="https://www.makemytrip.com/flights-hotels/";
 		dataSheetName = "TC001";
 	}
-		//@Test(dataProvider="fetchData")
-		@Test
-		public void SignUp()
+		@Test(dataProvider="fetchData")
+		//@Test
+		public void SignUp(String emailID,String password,String confirmPassword)
 		{
 			new Dashboard(driver, test)
 			.clickLoginMenu()
 			.clickCreateNewUser()
-			.enterNewEmailId("bbbvig@yopmail.com")
-			.enterNewPassword("bbbvig")
-			.enterConfirmPassword("bbbvig")
+			.enterNewEmailId(emailID)
+			.enterNewPassword(password)
+			.enterConfirmPassword(confirmPassword)
 			.clickIAgree()
 			.clickCreateAccountButton();				
 		}
