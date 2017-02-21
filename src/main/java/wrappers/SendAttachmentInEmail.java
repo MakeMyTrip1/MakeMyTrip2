@@ -17,9 +17,9 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-public class SendAttachmentInEmail {
+public class SendAttachmentInEmail extends GenericWrappers {
 
-	public static void main(String[] args) {
+	public void SendMail() {
 
 		// Sender's email ID needs to be mentioned
 		String from = "gsr170493@gmail.com";

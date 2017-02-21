@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 
 import utils.DataInputProvider;
 
-public class MakeMyTripWrappers extends GenericWrappers{
+public class MakeMyTripWrappers extends SendAttachmentInEmail{
 	
 	public String browserName;
 	public String dataSheetName;
@@ -38,6 +38,7 @@ public class MakeMyTripWrappers extends GenericWrappers{
 	@AfterSuite
 	public void afterSuite(){
 		endResult();
+		SendMail();
 	}
 
 	/*@AfterTest
