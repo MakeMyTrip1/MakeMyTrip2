@@ -99,8 +99,11 @@ public class FlightsReview extends MakeMyTripWrappers{
 		return this;
 	}	
 
-	public FlightsTraveller selectSecureMytripButton(){
+	public FlightsTraveller selectSecureMytripButton() throws InterruptedException{
 
+		Thread.sleep(4000);
+		driver.findElement(By.linkText("Continue as Guest")).click();
+		Thread.sleep(2000);
 		clickByLink("Yes, Secure my trip with insurance");
 		return new FlightsTraveller(driver, test);
 	}

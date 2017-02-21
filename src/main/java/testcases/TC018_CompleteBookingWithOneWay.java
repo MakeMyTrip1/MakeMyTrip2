@@ -30,7 +30,7 @@ public class TC018_CompleteBookingWithOneWay extends MakeMyTripWrappers {
 		.clickSearchFlight()
 		.selectBookButton()
 		.enterContactInfo("Vbc@yopmail.com")
-		.clickContinueAsGuest()
+		.selectSecureMytripButton()		
 		.enterFirstName("Kiran")
 		.enterLastName("Das")
 		.selectGenderMale()
