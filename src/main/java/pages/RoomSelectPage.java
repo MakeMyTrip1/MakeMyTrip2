@@ -45,9 +45,9 @@ public class RoomSelectPage extends MakeMyTripWrappers{
 	public HotelReviewPage BookRoom() throws InterruptedException{
 		
 		try {
-			clickByLinkNoSnap("BOOK NOW");
+			clickByLink("BOOK NOW");
 		} catch (Exception e) {
-			clickByLinkNoSnap("Book Now");
+			clickByLink("Book Now");
 		}
 
 		return new HotelReviewPage(driver,test);
