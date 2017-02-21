@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pages.Dashboard;
+import pages.DomesticHotel;
 import wrappers.MakeMyTripWrappers;
 
 public class TC025_SearchDomesticHotel extends MakeMyTripWrappers
@@ -15,19 +16,19 @@ public class TC025_SearchDomesticHotel extends MakeMyTripWrappers
 		testDescription = "To verify user to able search hotels by entering mandatory details with dosmestic option";
 		category = "smoke";
 		authors = "Jayaram";
-		url="https://www.makemytrip.com/flights-hotels/";
+		url="https://www.makemytrip.com/hotels/";
 		dataSheetName = "TC001";
 	}
 	
 	@Test
 	public void DomesticHotelSearch()
 	{
-		new Dashboard(driver, test)
-		.clickLoginMenu()
+		new DomesticHotel(driver, test)
+		/*.clickLoginMenu()
 		.enterEmailIdForLogin("aaavig@yopmail.com")
 		.enterPasswordForLogin("aaavig")
 		.clickContinue()
-        .selectHotelsTab()
+        .selectHotelsTab()*/
         //.selectDomesticOptionInHotel()
         .enterCity("Chennai,India")
         .enterCheckInDate()

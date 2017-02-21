@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pages.Dashboard;
+import pages.DomesticHotel;
 import wrappers.MakeMyTripWrappers;
 
 public class TC026_SearchInternationalHotel extends MakeMyTripWrappers
@@ -15,19 +16,19 @@ public class TC026_SearchInternationalHotel extends MakeMyTripWrappers
 		testDescription = "To verify user to able search hotels by entering mandatory details with international option";
 		category = "smoke";
 		authors = "Jayaram";
-		url="https://www.makemytrip.com/flights-hotels/";
+		url="https://www.makemytrip.com/hotels/";
 		dataSheetName = "TC001";
 	}
 	
 	@Test
 	public void InternationalHotelSearch()
 	{
-		new Dashboard(driver, test)
-		.clickLoginMenu()
+		new DomesticHotel(driver, test)
+		/*.clickLoginMenu()
 		.enterEmailIdForLogin("aaavig@yopmail.com")
 		.enterPasswordForLogin("aaavig")
 		.clickContinue()
-        .selectHotelsTab()
+        .selectHotelsTab()*/
         //.selectInternationalOptionInHotel()
         .enterCity("New South Wales, Australia")
         .enterCheckInDate()
