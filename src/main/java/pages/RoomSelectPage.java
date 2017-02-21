@@ -44,12 +44,10 @@ public class RoomSelectPage extends MakeMyTripWrappers{
 	//Click on 'Book now" button
 	public HotelReviewPage BookRoom() throws InterruptedException{
 		
-		try {
-			clickByLink("BOOK NOW");
-		} catch (Exception e) {
-			clickByLink("Book Now");
-		}
-
+			//clickByLink("Book Now");
+		Thread.sleep(2000);
+		//driver.findElementById("details-select-book1").click();
+			clickById("details-select-book1");
 		return new HotelReviewPage(driver,test);
 	}
 }
