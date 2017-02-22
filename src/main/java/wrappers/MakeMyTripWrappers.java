@@ -37,8 +37,9 @@ public class MakeMyTripWrappers extends SendAttachmentInEmail{
 		
 	@AfterSuite
 	public void afterSuite(){
-		endResult();
 		SendMail();
+		endResult();
+		
 	}
 
 	/*@AfterTest
