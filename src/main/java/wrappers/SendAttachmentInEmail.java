@@ -26,6 +26,8 @@ public class SendAttachmentInEmail extends GenericWrappers {
 		
 		// Recipient's email ID needs to be mentioned.
 		String to = "vignesh170493@gmail.com";
+		
+		String cc="jayaramviswanathan@gmail.com";
 
 		final String username = "gsr170493@gmail.com";
 		final String password = "gsr@123456789";
@@ -65,7 +67,7 @@ public class SendAttachmentInEmail extends GenericWrappers {
 			BodyPart messageBodyPart = new MimeBodyPart();
 
 			// Now set the actual message
-			messageBodyPart.setText("Hi,\n"+"Test report of MakeMyTrip scenarios\n"+ "Regards,\n"+"Vignesh");
+			messageBodyPart.setText("Hi,\n"+"Please find the attachment of Automation Test report for MakeMyTrip scenarios\n"+ "Regards,\n"+"Vignesh");
 
 			// Create a multipar message
 			Multipart multipart = new MimeMultipart();
@@ -78,7 +80,7 @@ public class SendAttachmentInEmail extends GenericWrappers {
 			String filename = "C:\\Users\\vignesh.k\\.jenkins\\workspace\\MakeMyTrip2\\reports\\result.html";
 			DataSource source = new FileDataSource(filename);
 			messageBodyPart.setDataHandler(new DataHandler(source));
-			messageBodyPart.setFileName(filename);
+			messageBodyPart.setFileName("MakeMyTrip Automation Test Result.html");
 			multipart.addBodyPart(messageBodyPart);
 
 			// Send the complete message parts
