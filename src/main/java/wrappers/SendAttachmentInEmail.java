@@ -59,6 +59,9 @@ public class SendAttachmentInEmail extends GenericWrappers {
 
 			// Set To: header field of the header.
 			message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(to));
+			
+			//Set CC
+			message.setRecipients(Message.RecipientType.CC, InternetAddress.parse(cc));
 
 			// Set Subject: header field
 			message.setSubject("Automation Test result");
