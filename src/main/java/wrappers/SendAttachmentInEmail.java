@@ -27,7 +27,7 @@ public class SendAttachmentInEmail extends GenericWrappers {
 		// Recipient's email ID needs to be mentioned.
 		String to = "vignesh170493@gmail.com";
 		
-		String cc="jayaramviswanathan@gmail.com";
+		String cc="contactsharath@gmail.com";
 
 		final String username = "gsr170493@gmail.com";
 		final String password = "gsr@123456789";
