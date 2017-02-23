@@ -12,7 +12,7 @@ public class DomesticHotel extends MakeMyTripWrappers{
 	public DomesticHotel(RemoteWebDriver driver, ExtentTest test){
 		this.driver=driver;
 		this.test = test;
-		if(!verifyTitle("Online Hotel Booking for Cheap, Budget & Luxury Hotels in India | MakeMyTrip.com")){
+		if(!verifyTitle("Book from Cheap Hotels to Luxury Hotels Online & Get Upto 70% Off")){
 			reportStep("This is not Domestic Hotel Page", "FAIL");
 		}
 	}
