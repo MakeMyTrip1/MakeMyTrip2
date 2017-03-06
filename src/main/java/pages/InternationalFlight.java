@@ -14,7 +14,10 @@ public class InternationalFlight extends MakeMyTripWrappers{
 		this.test = test;
 		if(!verifyTitle("International Flights, Cheap International Air Tickets Booking, Lowest International Airfare | MakeMyTrip India")){
 			if(!verifyTitle("Cheap Air Tickets, Flight Ticket Booking of Domestic Flights at Lowest Airfare: MakeMyTrip")){
-				reportStep("This is not Domestic Flight Page", "FAIL");
+				if (!verifyTitle("Book International Flights Online, Cheapest Airfares upto 25,000 Off with Makemytrip.com")) {
+					reportStep("This is not Domestic Flight Page", "FAIL");	
+				}
+				
 
 			}
 		}

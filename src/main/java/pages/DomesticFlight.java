@@ -15,8 +15,9 @@ public class DomesticFlight extends MakeMyTripWrappers {
 		this.test = test;
 		if(!verifyTitle("Cheap Flight Ticket Booking Online, Lowest Domestic Air Fares @ 800/- off")){
 			if(!verifyTitle("Cheap Air Tickets, Flight Ticket Booking of Domestic Flights at Lowest Airfare: MakeMyTrip")){
+				if(!verifyTitle("Book Cheap Flights Ticket Online, Lowest Air Fares Get Upto 800 OFF with Makemytrip.com")){
 				reportStep("This is not Domestic Flight Page", "FAIL");
-
+				}
 			}
 		}
 	}
